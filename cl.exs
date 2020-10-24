@@ -6,4 +6,5 @@ real
 |> Enum.map(fn {x, y} -> :math.pow(x-y, 2) end)
 |> Enum.sum
 # |> Kernel./(Enum.count(real))
-# |> &(IO.puts(&1/Enum.count(real)))
+|> (&(&1/Enum.count(real))).()
+|> IO.puts
